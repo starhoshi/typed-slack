@@ -1,0 +1,53 @@
+{
+  "name": "typed-slack",
+  "version": "0.0.1",
+  "description": "Type-safe slack client for TypeScript.",
+  "main": "out/typed-slack.js",
+  "types": "out/typed-slack.d.ts",
+  "scripts": {
+    "test": "jest",
+    "build": "tslint -p tslint.json && tsc -d",
+    "publish:patch": "yarn run build && npm version patch && git push origin master && git push origin --tags && npm publish --access=public",
+    "publish:minor": "yarn run build && npm version minor && git push origin master && git push origin --tags && npm publish --access=public",
+    "publish:major": "yarn run build && npm version major && git push origin master && git push origin --tags && npm publish --access=public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/starhoshi/typed-slack.git"
+  },
+  "keywords": [
+    "tsd",
+    "DefinitelyTyped",
+    "slack",
+    "typescript"
+  ],
+  "author": "star__hoshi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/starhoshi/typed-slack/issues"
+  },
+  "homepage": "https://github.com/starhoshi/typed-slack#readme",
+  "jest": {
+    "transform": {
+      "\\.ts": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "src/test/.*.test.ts",
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ]
+  },
+  "dependencies": {
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.1.2",
+    "@types/request-promise": "^4.1.41",
+    "jest": "^22.2.2",
+    "ts-jest": "^22.0.3",
+    "tslint": "^5.9.1",
+    "typescript": "^2.7.1"
+  }
+}
