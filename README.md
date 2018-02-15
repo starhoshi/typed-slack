@@ -2,11 +2,13 @@
     <img src="https://raw.githubusercontent.com/starhoshi/typed-slack/master/docs/logo.png" width='200px' />
 </p>
 
-# typed-slack
+# typed-slack [![Build Status](https://travis-ci.org/starhoshi/typed-slack.svg?branch=master)](https://travis-ci.org/starhoshi/typed-slack)
 
 Typed-slack is a type-safe slack client for TypeScript.
 
-[slackapi/node\-slack\-sdk](https://github.com/slackapi/node-slack-sdk) is great slack client. However, this library do not contain d.ts files. Typed-slack has type definitions, so you can write type-safe.
+[slackapi/node\-slack\-sdk](https://github.com/slackapi/node-slack-sdk) is great slack client. However, it does not contain d.ts files. Typed-slack has type definitions, so you can handle slack-api easily and type-safely.
+
+Type Definisions is [here#typed\-slack\.d\.ts](https://github.com/starhoshi/typed-slack/blob/master/out/typed-slack.d.ts).
 
 ## TODO
 
@@ -30,9 +32,13 @@ npm install typed-slack
 import * as Slack from 'typed-slack'
 
 let slack = new Slack.IncomingWebhook('https://hooks.slack.com/services/.......')
-try {
-  await slack.send({ text: 'text' })
-} catch (e) {
+slack.send({ text: 'text' }).then(e => {
+  console.log('success')
+}).catch(e => {
   console.error(e)
-}
+})
 ```
+
+If you  attachments
+
+More optional parameter is [here#typed\-slack\.d\.ts](https://github.com/starhoshi/typed-slack/blob/master/out/typed-slack.d.ts)
