@@ -3,7 +3,7 @@ import 'jest'
 
 jest.setTimeout(10000)
 
-let slack = new Slack.Webhook(process.env.SLACK_URL as string)
+let slack = new Slack.IncomingWebhook(process.env.SLACK_URL as string)
 
 describe('only text', () => {
   test('ok', async () => {
@@ -25,7 +25,7 @@ describe('no options', () => {
 
 describe('full options', () => {
   test('ok', async () => {
-    const options = <Slack.WebhookOptions>{
+    const options = <Slack.IncomingWebhookOptions>{
       text: '@star__hoshi __test__',
       channel: 'debug',
       username: 'hoge',

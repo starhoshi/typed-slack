@@ -100,7 +100,7 @@ export interface Attachment {
 /**
  * https://api.slack.com/incoming-webhooks
  */
-export interface WebhookOptions {
+export interface IncomingWebhookOptions {
     /**
      * Text of the message to send.
      */
@@ -131,8 +131,8 @@ export interface WebhookOptions {
      */
     attachments?: Attachment[];
 }
-export declare class Webhook {
+export declare class IncomingWebhook {
     url: string;
     constructor(url: string);
-    send(options: WebhookOptions): rp.RequestPromise;
+    send(options: IncomingWebhookOptions): rp.RequestPromise;
 }

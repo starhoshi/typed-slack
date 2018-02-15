@@ -7,7 +7,7 @@ var Color;
     Color["Warning"] = "warning";
     Color["Danger"] = "danger";
 })(Color = exports.Color || (exports.Color = {}));
-class Webhook {
+class IncomingWebhook {
     constructor(url) {
         this.url = url;
     }
@@ -20,4 +20,4 @@ class Webhook {
         });
     }
 }
-exports.Webhook = Webhook;
+exports.IncomingWebhook = IncomingWebhook;

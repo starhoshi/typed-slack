@@ -103,7 +103,7 @@ export interface Attachment {
 /**
  * https://api.slack.com/incoming-webhooks
  */
-export interface WebhookOptions {
+export interface IncomingWebhookOptions {
   /**
    * Text of the message to send.
    */
@@ -135,14 +135,14 @@ export interface WebhookOptions {
   attachments?: Attachment[]
 }
 
-export class Webhook {
+export class IncomingWebhook {
   url: string
 
   constructor(url: string) {
     this.url = url
   }
 
-  send(options: WebhookOptions) {
+  send(options: IncomingWebhookOptions) {
     return rp({
       method: 'POST',
       uri: this.url,
