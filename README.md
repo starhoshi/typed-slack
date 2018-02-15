@@ -52,7 +52,7 @@ const options = <Slack.IncomingWebhookOptions>{
   link_names: 1,
   attachments: [
     {
-      color: '#36a64f',
+      color: Slack.Color.Danger,
       fields: [
         {
           title: 'Priority',

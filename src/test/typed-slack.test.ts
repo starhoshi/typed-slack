@@ -34,7 +34,7 @@ describe('full options', () => {
       attachments: [
         {
           fallback: 'Required plain-text summary of the attachment.',
-          color: '#36a64f',
+          color: Slack.Color.Danger,
           pretext: 'Optional text that appears above the attachment block',
           author_name: 'Bobby Tables',
           author_link: 'http://flickr.com/bobby/',
