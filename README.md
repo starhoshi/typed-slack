@@ -39,6 +39,30 @@ slack.send({ text: 'text' }).then(e => {
 })
 ```
 
-If you  attachments
+#### Use options
 
-More optional parameter is [here#typed\-slack\.d\.ts](https://github.com/starhoshi/typed-slack/blob/master/out/typed-slack.d.ts)
+More optional parameters are [here#typed\-slack\.d\.ts](https://github.com/starhoshi/typed-slack/blob/master/out/typed-slack.d.ts)
+
+```ts
+const options = <Slack.IncomingWebhookOptions>{
+  text: '@star__hoshi Hi!',
+  channel: 'debug',
+  icon_emoji: ':smile:',
+  link_names: 1,
+  attachments: [
+    {
+      color: '#36a64f',
+      fields: [
+        {
+          title: 'Priority',
+          value: 'High',
+          short: false
+        }
+      ],
+      image_url: 'http://my-website.com/path/to/image.jpg',
+      ts: 123456789
+    }
+  ]
+}
+await slack.send(options)
+```
