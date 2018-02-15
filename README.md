@@ -9,7 +9,9 @@ Typed-slack is a type-safe slack client for TypeScript.
 
 [slackapi/node\-slack\-sdk](https://github.com/slackapi/node-slack-sdk) is great slack client. However, it does not contain d.ts files. Typed-slack has type definitions, so you can handle slack-api easily and type-safely.
 
-Type Definisions is [here#typed\-slack\.d\.ts](https://github.com/starhoshi/typed-slack/blob/master/out/typed-slack.d.ts).
+Code completion is enabled when using VSCode.
+
+![vscode\.gif \(898×298\)](https://raw.githubusercontent.com/starhoshi/typed-slack/master/docs/vscode.gif)
 
 ## TODO
 
