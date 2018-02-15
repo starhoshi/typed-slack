@@ -1,6 +1,6 @@
 {
   "name": "typed-slack",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Type-safe slack client for TypeScript.",
   "main": "out/typed-slack.js",
   "types": "out/typed-slack.d.ts",
