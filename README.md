@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/starhoshi/typed-slack/master/docs/logo.png" width='200px' />
+    <img src="https://raw.githubusercontent.com/starhoshi/typed-slack/master/assets/logo.png" width='200px' />
 </p>
 
 # typed-slack [![npm version](https://badge.fury.io/js/typed-slack.svg)](https://badge.fury.io/js/typed-slack) [![Build Status](https://travis-ci.org/starhoshi/typed-slack.svg?branch=master)](https://travis-ci.org/starhoshi/typed-slack) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c7a8f750afbd40019c5c4f859dd64d19)](https://www.codacy.com/app/kensuke1751/typed-slack?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=starhoshi/typed-slack&amp;utm_campaign=Badge_Grade) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
@@ -11,7 +11,7 @@ Typed-slack is a type-safe slack client for TypeScript.
 
 Code completion is enabled when using VSCode.
 
-![vscode\.gif \(898×298\)](https://raw.githubusercontent.com/starhoshi/typed-slack/master/docs/vscode.gif)
+![vscode\.gif \(898×298\)](https://raw.githubusercontent.com/starhoshi/typed-slack/master/assets/vscode.gif)
 
 ## TODO
 

@@ -7,9 +7,10 @@
   "scripts": {
     "test": "jest",
     "build": "tslint -p tslint.json && tsc -d",
-    "publish:patch": "yarn run build && npm version patch && git push origin master && git push origin --tags && npm publish --access=public",
-    "publish:minor": "yarn run build && npm version minor && git push origin master && git push origin --tags && npm publish --access=public",
-    "publish:major": "yarn run build && npm version major && git push origin master && git push origin --tags && npm publish --access=public"
+    "doc": "yarn run typedoc --exclude '**/test/**/*.ts' --excludeNotExported --out docs src",
+    "publish:patch": "yarn run doc && git commit -am 'Update docs' && yarn run build && npm version patch && git push origin master && git push origin --tags && npm publish --access=public",
+    "publish:minor": "yarn run doc && git commit -am 'Update docs' && yarn run build && npm version minor && git push origin master && git push origin --tags && npm publish --access=public",
+    "publish:major": "yarn run doc && git commit -am 'Update docs' && yarn run build && npm version major && git push origin master && git push origin --tags && npm publish --access=public"
   },
   "repository": {
     "type": "git",
@@ -48,6 +49,7 @@
     "jest": "^22.2.2",
     "ts-jest": "^22.0.3",
     "tslint": "^5.9.1",
+    "typedoc": "^0.10.0",
     "typescript": "^2.7.1"
   }
 }
