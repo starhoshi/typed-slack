@@ -42,7 +42,7 @@ slack.send({ text: 'text' }).then(e => {
 })
 ```
 
-#### Use options
+#### Options
 
 More optional parameters are [here#typed\-slack\.d\.ts](https://github.com/starhoshi/typed-slack/blob/master/out/typed-slack.d.ts)
 
