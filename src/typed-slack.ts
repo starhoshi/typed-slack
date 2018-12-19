@@ -3,7 +3,7 @@ import * as rp from 'request-promise'
 /**
  * Fields are defined as an array, and hashes contained within it will be displayed in a table inside the message attachment.
  */
-export interface Feild {
+export interface Field {
   /**
    * Shown as a bold heading above the value text. It cannot contain markup and will be escaped for you.
    */
@@ -69,7 +69,7 @@ export interface Attachment {
   /**
    * Fields are defined as an array, and hashes contained within it will be displayed in a table inside the message attachment.
    */
-  fields?: Feild[]
+  fields?: Field[]
   /**
    * A valid URL to an image file that will be displayed inside a message attachment. We currently support the following formats: GIF, JPEG, PNG, and BMP.
    * Large images will be resized to a maximum width of 400px or a maximum height of 500px, while still maintaining the original aspect ratio.
